@@ -8,21 +8,19 @@ export const bookingRequests = () => {
 
     let html = `
         <ul>
-            ${
-                bookings.map(booking => { 
-                    
-                    return `
+            ${bookings.map(booking => {
+
+        return `
     <li>
         ${booking.childsName}
         <select class="clowns" id="clowns">
         <option value="">Choose</option>
-        ${
-            clowns.map(
-                clown => {
-                    return `<option value="${booking.id}--${clown.id}">${clown.name}</option>`
-                }
-            ).join("")
-        }
+        ${clowns.map(
+            clown => {
+                return `<option value="${booking.id}--${clown.id}">${clown.name}</option>`
+            }
+        ).join("")
+            }
     </select>
         
         <button class="booking__delete"
@@ -31,9 +29,9 @@ export const bookingRequests = () => {
         </button>
     </li>
     
-` 
-                }).join("")
-            }
+`
+    }).join("")
+        }
             
         </ul>
     `
@@ -45,7 +43,7 @@ const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", click => {
     if (click.target.id.startsWith("booking--")) {
-        const [,bookingId] = click.target.id.split("--")
+        const [, bookingId] = click.target.id.split("--")
         deleteBooking(parseInt(bookingId))
     }
 })
@@ -56,21 +54,9 @@ mainContainer.addEventListener(
     (event) => {
         if (event.target.id === "clowns") {
             const [bookingId, clownId] = event.target.value.split("--")
-
-            /*
-                This object should have 3 properties
-                   1. requestId
-                   2. plumberId
-                   3. date_created
-            */
-            const completion = { bookingId, clownId, date_created}
+            const completion = { bookingId, clownId, date_created }
             saveCompletedBooking(completion)
-            /*
-                Invoke the function that performs the POST request
-                to the `completions` resource for your API. Send the
-                completion object as a parameter.
-             */
 
-        } 
-    } 
+        }
+    }
 )

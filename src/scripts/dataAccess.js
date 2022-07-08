@@ -2,7 +2,7 @@
 
 const applicationState = { bookings: [] }
 const API = "http://localhost:8088"
-const mainContainer = document.querySelector("container")
+const mainContainer = document.querySelector("#container")
 
 export const fetchBookings = () => {
     return fetch(`${API}/bookings`)

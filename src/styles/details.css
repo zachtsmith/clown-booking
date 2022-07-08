@@ -10,7 +10,7 @@
     width: 100%
 }
 
-.input {
+.input, .date {
     flex-direction: column;
     width: 95%;
     padding: 5px;

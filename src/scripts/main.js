@@ -1,6 +1,6 @@
-import { fetchBookings, fetchClowns } from "./dataAccess.js"
+import { fetchBookings } from "./dataAccess.js"
 import { ClownsForHire } from "./ClownforHire.js"
-// import { fetchPlumbers } from "./dataAccess.js"
+import { fetchClowns } from "./dataAccess.js"
 
 
 

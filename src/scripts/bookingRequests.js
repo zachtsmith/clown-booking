@@ -15,7 +15,7 @@ export const bookingRequests = () => {
     <li>
         ${booking.childsName}
         <select class="clowns" id="clowns">
-        <option value="">Who Clowned Around?</option>
+        <option value="">Choose</option>
         ${
             clowns.map(
                 clown => {

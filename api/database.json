@@ -1,15 +1,14 @@
 {
-  "clowns": [],
-  "bookings": [
+  "clowns": [
     {
-      "nameOfParent": "Cleveland Smith",
-      "childsName": "Zach Smith",
-      "amountOfKids": 4,
-      "eventAddress": "145 Rockwood",
-      "eventDate": "2022-07-07",
-      "durationOfEvent": 8,
-      "id": 3
+      "id": 1,
+      "name": "Buttons"
+    },
+    {
+      "id": 2,
+      "name": "Lollipop"
     }
   ],
+  "bookings": [],
   "completions": []
 }
